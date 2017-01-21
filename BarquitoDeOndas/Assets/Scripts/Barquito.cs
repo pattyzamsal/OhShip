@@ -6,11 +6,17 @@ public class Barquito : MonoBehaviour {
 
     public static Barquito instance;
 
+    public float maxSpeed = 100;
+
     public Rigidbody rigid;
 
     void Start() {
         instance = this;
         rigid = this.GetComponent<Rigidbody>();
+    }
+
+    public void FixedUpdate() {
+        rigid.velocity = Vector3.ClampMagnitude( rigid.velocity, maxSpeed );
     }
 
     public void Move( MoveInfo moveInfo ) {
