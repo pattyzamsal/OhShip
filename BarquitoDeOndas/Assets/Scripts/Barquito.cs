@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Barquito : MonoBehaviour {
 
-    public Rigidbody2D rigid;
+    public static Barquito instance;
+
+    public Rigidbody rigid;
 
     void Start() {
-        rigid = this.GetComponent<Rigidbody2D>();
+        instance = this;
+        rigid = this.GetComponent<Rigidbody>();
     }
 
     public void Move( MoveInfo moveInfo ) {
-        rigid.AddForce( moveInfo.direction * (moveInfo.speed), ForceMode2D.Force );
+        Debug.Log( "speed: " + moveInfo.speed );
+        //rigid.angularVelocity = Vector3.zero;
+        //rigid.velocity = Vector3.zero;
+        rigid.AddForce( new Vector3( moveInfo.directionX, 0, moveInfo.directionZ ).normalized * (moveInfo.speed), ForceMode.Impulse );
     }
 }

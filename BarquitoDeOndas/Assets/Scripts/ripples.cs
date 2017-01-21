@@ -25,7 +25,6 @@ public class ripples : MonoBehaviour {
 			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
 			if (hit) 
 			{
-				Debug.Log ("Hit");
 				this.GetComponent<Renderer> ().material.SetInt("_Click",1);
 				offWave = 1.0f;
 				this.GetComponent<Renderer> ().material.SetFloat ("_DirectionX",hitInfo.point.x);

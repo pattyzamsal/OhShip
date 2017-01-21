@@ -6,29 +6,35 @@ public class Wave : MonoBehaviour {
 
     public float rippleMax;
 
-    public CircleCollider2D circle;
+    public SphereCollider sphere;
 
     public MoveInfo moveInfo;
 
-    [Range( 0, 10 )]
+    [Range( 0, 20 )]
     public float multiplier;
 
     void Start() {
-        circle = this.GetComponent<CircleCollider2D>();
+        sphere = this.GetComponent<SphereCollider>();
     }
 
     void FixedUpdate() {
-        circle.radius += Time.fixedDeltaTime * multiplier;
-        if( this.gameObject.transform.localScale.x > rippleMax ) {
+        sphere.radius += Time.fixedDeltaTime * multiplier;
+        if( sphere.radius > rippleMax ) {
             GameObject.Destroy( this.gameObject );
         }
     }
 
-    void OnCollisionEnter2D( Collision2D coll ) {
+    void OnTriggerEnter( Collider coll ) {
         if( coll.gameObject.tag == "OhShip" ) {
             moveInfo = new MoveInfo();
-            moveInfo.speed = 1/circle.radius * rippleMax;
-            moveInfo.direction = coll.transform.position - this.transform.position;
+            moveInfo.speed = Mathf.InverseLerp( 0, rippleMax, rippleMax / sphere.radius ) * multiplier;
+            //moveInfo.directionX = this.transform.position.x;
+            //moveInfo.directionY = this.transform.position.y;
+            //moveInfo.directionZ = this.transform.position.z;
+            //moveInfo.radius = sphere.radius;
+            moveInfo.directionX = coll.transform.position.x - this.transform.position.x;
+            moveInfo.directionY = coll.transform.position.y - this.transform.position.y;
+            moveInfo.directionZ = coll.transform.position.z - this.transform.position.z;
             coll.gameObject.SendMessage( "Move", moveInfo );
             GameObject.Destroy( this.gameObject );
         }
