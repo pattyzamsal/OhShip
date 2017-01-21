@@ -15,10 +15,4 @@ public class WaveManager : MonoBehaviour {
             }
         }
     }
-
-    public IEnumerator RandomWaveSpawner() {
-        yield return null;
-    }
-
-
 }
