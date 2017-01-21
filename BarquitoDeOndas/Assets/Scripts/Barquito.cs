@@ -6,6 +6,8 @@ public class Barquito : MonoBehaviour {
 
     public static Barquito instance;
 
+    public static int life;
+
     public float maxSpeed = 100;
 
     public Rigidbody rigid;
@@ -15,14 +17,11 @@ public class Barquito : MonoBehaviour {
         rigid = this.GetComponent<Rigidbody>();
     }
 
-    public void FixedUpdate() {
-        rigid.velocity = Vector3.ClampMagnitude( rigid.velocity, maxSpeed );
-    }
+    //public void FixedUpdate() {
+    //    rigid.velocity = Vector3.ClampMagnitude( rigid.velocity, maxSpeed );
+    //}
 
-    public void Move( MoveInfo moveInfo ) {
-        Debug.Log( "speed: " + moveInfo.speed );
-        //rigid.angularVelocity = Vector3.zero;
-        //rigid.velocity = Vector3.zero;
+    public void ReactToWave( MoveInfo moveInfo ) {
         rigid.AddForce( new Vector3( moveInfo.directionX, 0, moveInfo.directionZ ).normalized * (moveInfo.speed), ForceMode.Impulse );
     }
 }
