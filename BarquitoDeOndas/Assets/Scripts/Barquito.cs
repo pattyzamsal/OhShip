@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Barquito : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void Move( MoveInfo moveInfo ) {
+
+    }
+
+    public IEnumerator WaveMoving(  ) {
+        yield return null;
+    }
 }

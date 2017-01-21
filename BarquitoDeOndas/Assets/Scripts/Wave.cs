@@ -6,6 +6,8 @@ public class Wave : MonoBehaviour {
 
     public float circleMax;
 
+    public MoveInfo moveInfo;
+
     [Range( 0, 10 )]
     public float multiplier;
 
@@ -14,6 +16,15 @@ public class Wave : MonoBehaviour {
         //circleCol.radius = Mathf.Clamp01( circleCol.radius );
         if( this.gameObject.transform.localScale.x >= circleMax ) {
             GameObject.Destroy(this.gameObject);
+        }
+    }
+
+    void OnCollisionEnter2D( Collision2D coll ) {
+        if( coll.gameObject.tag == "OhShip" ) {
+            moveInfo = new MoveInfo();
+            moveInfo.speed = coll.gameObject.transform.localScale.x;
+            moveInfo.direction = new Vector3(  );
+            coll.gameObject.SendMessage( "Move", 10 );
         }
     }
 }
