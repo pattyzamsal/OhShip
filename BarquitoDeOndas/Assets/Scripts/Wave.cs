@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour {
 
-    public float circleMax;
+    public float rippleMax;
+
+    public CircleCollider2D circle;
 
     public MoveInfo moveInfo;
 
     [Range( 0, 10 )]
     public float multiplier;
 
+    void Start() {
+        circle = this.GetComponent<CircleCollider2D>();
+    }
+
     void FixedUpdate() {
-        this.gameObject.transform.localScale += new Vector3 ( Time.fixedDeltaTime , Time.fixedDeltaTime , Time.fixedDeltaTime ) * multiplier;
-        //circleCol.radius = Mathf.Clamp01( circleCol.radius );
-        if( this.gameObject.transform.localScale.x >= circleMax ) {
-            GameObject.Destroy(this.gameObject);
+        circle.radius += Time.fixedDeltaTime * multiplier;
+        if( this.gameObject.transform.localScale.x > rippleMax ) {
+            GameObject.Destroy( this.gameObject );
         }
     }
 
     void OnCollisionEnter2D( Collision2D coll ) {
         if( coll.gameObject.tag == "OhShip" ) {
             moveInfo = new MoveInfo();
-            moveInfo.speed = coll.gameObject.transform.localScale.x;
-            moveInfo.direction = new Vector3(  );
-            coll.gameObject.SendMessage( "Move", 10 );
+            moveInfo.speed = 1/circle.radius * rippleMax;
+            moveInfo.direction = coll.transform.position - this.transform.position;
+            coll.gameObject.SendMessage( "Move", moveInfo );
+            GameObject.Destroy( this.gameObject );
         }
     }
 }
