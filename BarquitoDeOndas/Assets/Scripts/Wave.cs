@@ -27,15 +27,14 @@ public class Wave : MonoBehaviour {
     void OnTriggerEnter( Collider coll ) {
         if( coll.gameObject.tag == "OhShip" ) {
             moveInfo = new MoveInfo();
+
             moveInfo.speed = Mathf.InverseLerp( 0, rippleMax, rippleMax / sphere.radius ) * multiplier;
-            //moveInfo.directionX = this.transform.position.x;
-            //moveInfo.directionY = this.transform.position.y;
-            //moveInfo.directionZ = this.transform.position.z;
-            //moveInfo.radius = sphere.radius;
+
             moveInfo.directionX = coll.transform.position.x - this.transform.position.x;
             moveInfo.directionY = coll.transform.position.y - this.transform.position.y;
             moveInfo.directionZ = coll.transform.position.z - this.transform.position.z;
-            coll.gameObject.SendMessage( "Move", moveInfo );
+
+            coll.gameObject.SendMessage( "ReactToWave", moveInfo );
             GameObject.Destroy( this.gameObject );
         }
     }
