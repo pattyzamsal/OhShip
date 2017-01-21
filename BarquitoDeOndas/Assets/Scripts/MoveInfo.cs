@@ -3,6 +3,6 @@
 public class MoveInfo : MonoBehaviour {
 
     public float speed;
-    public Vector3 direction;
+    public Vector2 direction;
 
 }
