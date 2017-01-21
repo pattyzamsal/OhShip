@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour {
 
-    public CircleCollider2D circleCol;
     public float circleMax;
 
     [Range( 0, 10 )]
     public float multiplier;
 
-    // Use this for initialization
-    void Start() {
-        circleCol = this.GetComponent<CircleCollider2D>();
-    }
-
     void FixedUpdate() {
-        circleCol.radius += Time.fixedDeltaTime * multiplier;
+        this.gameObject.transform.localScale += new Vector3 ( Time.fixedDeltaTime , Time.fixedDeltaTime , Time.fixedDeltaTime ) * multiplier;
         //circleCol.radius = Mathf.Clamp01( circleCol.radius );
-        if( circleCol.radius >= circleMax ) {
+        if( this.gameObject.transform.localScale.x >= circleMax ) {
             GameObject.Destroy(this.gameObject);
         }
     }
