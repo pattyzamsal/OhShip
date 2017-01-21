@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: cb7c65b38196852469a9ba302e895e4e
+timeCreated: 1485031564
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Sail
+  fontNames:
+  - Sail
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
