@@ -22,7 +22,7 @@
 		
 		CGPROGRAM
 		// Physically based Standard lighting model, and enable shadows on all light types
-		#pragma surface surf SimpleLambert vertex:vert
+		#pragma surface surf Standard vertex:vert
 
 		// Use shader model 3.0 target, to get nicer looking lighting
 		//#pragma target 3.0
@@ -36,6 +36,8 @@
 		float _RadioCirculoFallOFF;
 		float _OffWave;
 		int _Click;
+		float _Glossiness;
+		float _Metallic;
 
 		struct Input {
 			float2 uv_MainTex;
@@ -60,12 +62,12 @@
 
 				float offsetVertex =  (v.vertex.x * v.vertex.x) + (v.vertex.z * v.vertex.z);
 				float wave;
-				offsetVertex = ((v.vertex.x - _DirectionX*0.5f)*(v.vertex.x - _DirectionX*0.5f) + (v.vertex.z - _DirectionZ*0.5f)*(v.vertex.z - _DirectionZ*0.5f));
+				offsetVertex = ((v.vertex.x - _DirectionX)*(v.vertex.x - _DirectionX) + (v.vertex.z - _DirectionZ)*(v.vertex.z - _DirectionZ));
 				wave = falloff * _Amplitud * sin(offsetVertex * _WaveLenght + (-1.0f)*_Time.y *_Speed);
 
 				//v.vertex.y += wave;
 
-				float h = falloff * _WaveLenght * (v.vertex.x - _DirectionX*0.5f) * _Amplitud * cos(offsetVertex * _WaveLenght + (-1.0f)*_Time.y *_Speed);
+				float h = falloff * _WaveLenght * (v.vertex.x - _DirectionX) * _Amplitud * cos(offsetVertex * _WaveLenght + (-1.0f)*_Time.y *_Speed);
 				v.normal.x = -1.0f*h;
 				v.normal.y = 1.0f;
 				v.normal.z = 1.0f*h;
@@ -74,22 +76,17 @@
 
       	}
 
-      	half4 LightingSimpleLambert (SurfaceOutput s, half3 lightDir, half atten) {
-              half NdotL = dot (s.Normal, lightDir);
-              half4 c;
-              c.rgb = s.Albedo * _LightColor0.rgb * (NdotL * atten);
-              c.a = s.Alpha;
-              return c;
-          }
 
 		fixed4 _Color;
 
-		void surf (Input IN, inout SurfaceOutput  o) {
+		void surf (Input IN, inout SurfaceOutputStandard  o) {
 			// Albedo comes from a texture tinted by color
 			//fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			fixed4 c =  _Color;
 			o.Albedo = c.rgb;
 			o.Normal = o.Normal;
+			o.Metallic = _Metallic;
+			o.Smoothness = _Glossiness;
 			o.Alpha = c.a;
 		}
 		ENDCG
