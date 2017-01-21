@@ -67,7 +67,7 @@
 
 				float falloff = (1.0f-smoothstep(0.0,_RadioCirculoFallOFF, dist)) * falloffCenter;
 
-				float offsetVertex =  (v.vertex.x * v.vertex.x) + (v.vertex.z * v.vertex.z);
+				float offsetVertex; // =  (v.vertex.x * v.vertex.x) + (v.vertex.z * v.vertex.z);
 				float wave;
 				offsetVertex = ((v.vertex.x - _DirectionX)*(v.vertex.x - _DirectionX) + (v.vertex.z - _DirectionZ)*(v.vertex.z - _DirectionZ));
 				wave = falloff * _Amplitud * sin(offsetVertex * _WaveLenght + (-1.0f)*_Time.y *_Speed);
