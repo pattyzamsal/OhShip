@@ -1,6 +1,8 @@
 ﻿Shader "Custom/shWater" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
+		_BumpMap ("Bumpmap", 2D) = "bump" {}
+		_NoiseMap ("Noise", 2D) = "noise" {}
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
@@ -28,6 +30,9 @@
 		//#pragma target 3.0
 
 		sampler2D _MainTex;
+		sampler2D _BumpMap;
+		sampler2D _NoiseMap;
+
 		float _WaveLenght; 
 		float _Amplitud;
 		float _Speed;
@@ -41,6 +46,8 @@
 
 		struct Input {
 			float2 uv_MainTex;
+			float2 uv_BumpMap;
+			float2 uv_NoiseMap;
 		};
 
 		void vert (inout appdata_full v) {
@@ -82,10 +89,22 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard  o) {
 			// Albedo comes from a texture tinted by color
-			//fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			fixed4 c =  _Color;
+			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+
+			IN.uv_NoiseMap.x = IN.uv_NoiseMap.x + _Time.y*0.045f;
+			IN.uv_NoiseMap.y = IN.uv_NoiseMap.y + sin(_Time.y)*0.05f;
+			fixed4 cNoise = tex2D (_NoiseMap, IN.uv_NoiseMap);
+
+
+			//fixed4 c =  _Color;
 			o.Albedo = c.rgb;
-			o.Normal = o.Normal;
+			IN.uv_BumpMap.x = IN.uv_BumpMap.x + _Time.y*-0.035f;
+			//float4 npWave = tex2D (_BumpMap, IN.uv_BumpMap);
+			//o.Normal = UnpackNormal (normalize(npWave));//o.Normal;
+			float3 npWave = UnpackNormal (tex2D (_BumpMap, IN.uv_BumpMap));
+			//float sNP = abs(sin(_Time.y));
+			npWave = float3(npWave.x*cNoise.x, npWave.y*cNoise.x, npWave.z );
+			o.Normal = npWave;
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
 			o.Alpha = c.a;
