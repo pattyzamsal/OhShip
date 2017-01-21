@@ -19,7 +19,7 @@ public class Wave : MonoBehaviour {
         circleCol.radius += Time.fixedDeltaTime * multiplier;
         //circleCol.radius = Mathf.Clamp01( circleCol.radius );
         if( circleCol.radius >= circleMax ) {
-
+            GameObject.Destroy(this.gameObject);
         }
     }
 }
