@@ -6,13 +6,32 @@ public class WaveManager : MonoBehaviour {
 
     public GameObject wave;
 
-    void Update() {
-        if( Input.GetMouseButtonDown( 0 ) ) {
-            RaycastHit rayHit = new RaycastHit();
-            if( Physics.Raycast( Camera.main.ScreenPointToRay( Input.mousePosition ), out rayHit ) ) {
-                GameObject newWave = GameObject.Instantiate( wave, rayHit.transform );
-                newWave.transform.position = new Vector3( rayHit.point.x, rayHit.point.y, rayHit.point.z );
+    private bool _isTouching;
+
+    void Start() {
+        _isTouching = false;
+    }
+
+    void OnMouseDown() {
+        _isTouching = true;
+        StartCoroutine(checkTouching());
+    }
+
+    void OnMouseUp() {
+        _isTouching = false;
+    }
+
+    IEnumerator checkTouching() {
+        while (_isTouching) {
+            if (Input.GetMouseButtonDown(0)) {
+                RaycastHit rayHit = new RaycastHit();
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out rayHit)) {
+                    GameObject newWave = GameObject.Instantiate(wave, rayHit.transform);
+                    newWave.transform.position = new Vector3(rayHit.point.x, rayHit.point.y, rayHit.point.z);
+                }
             }
+            yield return null;
         }
     }
 }
+

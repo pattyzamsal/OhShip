@@ -19,6 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4226237946917242}
+  - component: {fileID: 65700772024601676}
+  - component: {fileID: 114884578631492748}
   m_Layer: 0
   m_Name: goWater
   m_TagString: Untagged
@@ -37,7 +39,6 @@ GameObject:
   - component: {fileID: 33948290411311414}
   - component: {fileID: 23144088042078898}
   - component: {fileID: 95522432259301990}
-  - component: {fileID: 65971566786250866}
   - component: {fileID: 114523099933025648}
   m_Layer: 0
   m_Name: mPlaneFinal
@@ -111,17 +112,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1605806666843438}
   m_Mesh: {fileID: 4300000, guid: d16ec3f00be16af48a80626cfddf09d0, type: 3}
---- !u!65 &65971566786250866
+--- !u!65 &65700772024601676
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1605806666843438}
+  m_GameObject: {fileID: 1446019202805206}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 16, y: 1.9984014e-15, z: 9}
+  m_Size: {x: 16, y: 0.26702404, z: 9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95522432259301990
 Animator:
@@ -152,3 +153,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+--- !u!114 &114884578631492748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1446019202805206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16a7284b51bf5e418148f477ca75848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wave: {fileID: 1602204528306310, guid: c1589282e7fb5e74fb19c645580dfa40, type: 2}
