@@ -6,10 +6,10 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: matWave
-  m_Shader: {fileID: 4800000, guid: 1060631e6e334a046acc3078ecf39eb0, type: 3}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_Name: lambert1
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -71,26 +71,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
-        name: _Amplitud
-      second: 0.4
-    - first:
         name: _BumpScale
       second: 1
-    - first:
-        name: _Click
-      second: 0
     - first:
         name: _Cutoff
       second: 0.5
     - first:
         name: _DetailNormalMapScale
       second: 1
-    - first:
-        name: _DirectionX
-      second: 0.1
-    - first:
-        name: _DirectionZ
-      second: 0.1
     - first:
         name: _DstBlend
       second: 0
@@ -99,7 +87,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 1
+      second: 0.5
     - first:
         name: _GlossyReflections
       second: 1
@@ -113,14 +101,8 @@ Material:
         name: _OcclusionStrength
       second: 1
     - first:
-        name: _OffWave
-      second: 0
-    - first:
         name: _Parallax
       second: 0.02
-    - first:
-        name: _RadioCirculoFallOFF
-      second: 6
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -128,24 +110,18 @@ Material:
         name: _SpecularHighlights
       second: 1
     - first:
-        name: _Speed
-      second: 40
-    - first:
         name: _SrcBlend
       second: 1
     - first:
         name: _UVSec
       second: 0
     - first:
-        name: _WaveLenght
-      second: 1.5
-    - first:
         name: _ZWrite
       second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.5034853, g: 0.5466818, b: 0.9852941, a: 1}
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
