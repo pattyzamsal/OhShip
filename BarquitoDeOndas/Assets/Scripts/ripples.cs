@@ -21,18 +21,18 @@ public class ripples : MonoBehaviour {
 
 		if (Input.GetMouseButtonDown(0))
 		{
-			RaycastHit hitInfo = new RaycastHit();
-			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
-			if (hit) 
-			{
-				this.GetComponent<Renderer> ().material.SetInt("_Click",1);
-				offWave = 1.0f;
-				this.GetComponent<Renderer> ().material.SetFloat ("_DirectionX",hitInfo.point.x);
-				this.GetComponent<Renderer> ().material.SetFloat ("_DirectionZ",hitInfo.point.z);
-				this.GetComponent<Renderer> ().material.SetFloat ("_OffWave",offWave);
+            if(!GameManager.instance.gameOver) {
+                RaycastHit hitInfo = new RaycastHit();
+                bool hit = Physics.Raycast( Camera.main.ScreenPointToRay( Input.mousePosition ), out hitInfo );
+                if( hit ) {
+                    this.GetComponent<Renderer>().material.SetInt( "_Click", 1 );
+                    offWave = 1.0f;
+                    this.GetComponent<Renderer>().material.SetFloat( "_DirectionX", hitInfo.point.x );
+                    this.GetComponent<Renderer>().material.SetFloat( "_DirectionZ", hitInfo.point.z );
+                    this.GetComponent<Renderer>().material.SetFloat( "_OffWave", offWave );
 
-			} 
-
+                }
+            }
 		} 
 
 		offWave = offWave - (Time.fixedDeltaTime * 1.0f);
