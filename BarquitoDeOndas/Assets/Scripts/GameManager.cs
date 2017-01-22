@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
     public void LoseLife() {
         if( lifes != 1 ) {
             lifeList[lifes - 1].GetComponent<Image>().sprite = noLifeSprite;
+            lifeList.Remove(lifeList[lifes - 1]);
             lifes--;
         }
         else {
