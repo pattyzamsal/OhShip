@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
-    public GameObject barquito;
-
     public Transform defaultPosition;
 
     public int lifes;
@@ -42,19 +40,20 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(SpawnWaves());
     }
 
-    public void ResetShip() {
-        Barquito.instance.transform.position = defaultPosition.transform.position;
+    public void ResetShipPosition() {
+        Barquito.instance.rigid.MovePosition( defaultPosition.transform.position);
     }
 
     public void LoseLife() {
-        if( lifes != 1 ) {
-            GameObject.Destroy(lifeList[lifes-1]);
+        if( lifes >= 1 ) {
+            GameObject.Destroy(lifeList[0]);
             lifes--;
         }
         else {
+            lifes--;
             GameOver();
         }
-        lifeList.RemoveAt(0);
+        if( lifeList.Count != 0 ) lifeList.RemoveAt(0);
     }
 
     public void AddLife() {
@@ -64,7 +63,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver() {
-
+        Debug.Log("GAME OVER");
     }
 
     IEnumerator SpawnWaves() {

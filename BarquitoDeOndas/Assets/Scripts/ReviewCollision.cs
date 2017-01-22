@@ -22,7 +22,7 @@ public class ReviewCollision : MonoBehaviour {
     public IEnumerator SpawnNewShip() {
         yield return new WaitForSeconds( 2f );
         Barquito.instance.ship.SetTrigger( "tgrBarquito" );
-        GameManager.instance.ResetShip();
+        GameManager.instance.ResetShipPosition();
     }
 
 }
