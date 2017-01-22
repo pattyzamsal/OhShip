@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
     public float waveWait;
 
+    public GameObject pnlGameOver;
+
     void Awake() {
         instance = this;
     }
@@ -65,7 +67,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver() {
-        Debug.Log("GAME OVER");
+        pnlGameOver.SetActive(true);
     }
 
     IEnumerator SpawnWaves() {

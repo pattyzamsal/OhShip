@@ -211,8 +211,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 132.23184
-    y: -26.611723
+    x: 123.999725
+    y: 58.999287
     width: 268
     height: 90
   anchorVector: {x: 0, y: 0}
@@ -300,6 +300,7 @@ MonoBehaviour:
   spawnWait: 0.5
   startWait: 1
   waveWait: 4
+  pnlGameOver: {fileID: 77428698}
 --- !u!114 &156046869
 MonoBehaviour:
   m_ObjectHideFlags: 0
