@@ -274,8 +274,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 212.90652
-    y: -155.02823
+    x: 123.999725
+    y: 58.4676
     width: 268
     height: 90
   anchorVector: {x: 0, y: 0}
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160f157754e2dcf4c8769c0b2db976d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ripple: {fileID: 737233434}
   defaultPosition: {fileID: 650582423}
   lifes: 3
   lifeContainer: {fileID: 1369758651}
@@ -704,7 +705,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 540
-    y: 125.00006
+    y: 124.488815
     width: 1080
     height: 250
   anchorVector: {x: 0, y: 0}
@@ -879,7 +880,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 472
-    y: 23.00008
+    y: 22.473513
     width: 160.00003
     height: 160
   anchorVector: {x: 0, y: 0}
@@ -1306,6 +1307,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737233434 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114764268371810398, guid: 8a5ee75f77877c342b85543e4e66c5e9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1081428019}
+  m_Script: {fileID: 11500000, guid: 1e96e5cb68b272944ba52c35e268ed4e, type: 3}
 --- !u!1001 &763321624
 Prefab:
   m_ObjectHideFlags: 0
@@ -1555,7 +1562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1.1299996, y: -0.5699995}
   m_AnchorMax: {x: 3.7299995, y: 0.3300005}
-  m_AnchoredPosition: {x: 0, y: 0.0000019073486}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.0000038146973}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823974867
@@ -1574,7 +1581,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 242.99995
-    y: -11.999951
+    y: -12.168659
     width: 259.99997
     height: 90
   anchorVector: {x: 0, y: 0}
@@ -1976,7 +1983,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 252.99998
-    y: 64.00123
+    y: 63.443985
     width: 268
     height: 90
   anchorVector: {x: 0, y: 0}
