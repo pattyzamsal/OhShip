@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour {
     }
 
     IEnumerator SpawnWaves() {
-        spawnWait = 0.1f;
         yield return new WaitForSeconds(startWait);
         while (true) {
             for (int zpos = -3; zpos < 4; zpos += 3) {
