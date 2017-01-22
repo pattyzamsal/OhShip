@@ -31,7 +31,9 @@ public class GameManager : MonoBehaviour {
 
     void Start() {
         for( int i = 0; i < lifes; i++ ) {
-            lifeList.Add( GameObject.Instantiate( lifeSprite, lifeContainer.transform ) );
+            GameObject life = GameObject.Instantiate(lifeSprite, lifeContainer.transform);
+            life.gameObject.transform.localScale = Vector3.one;
+            lifeList.Add( life);
         }
         StartCoroutine(SpawnWaves());
     }
@@ -48,7 +50,8 @@ public class GameManager : MonoBehaviour {
 
     public void AddLife() {
         lifes++;
-        lifeList.Add( GameObject.Instantiate( lifeSprite, lifeContainer.transform ) );
+        GameObject life = GameObject.Instantiate(lifeSprite, lifeContainer.transform);
+        lifeList.Add(life);
     }
 
     public void GameOver() {
