@@ -175,8 +175,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 325.971
-    y: 114.811615
+    x: 540
+    y: 1528.1555
     width: 560
     height: 380
   anchorVector: {x: 0, y: 0}
@@ -801,6 +801,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd402a3834afc024aa1984e61c59bce1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &816118580
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939101411872592, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c32f62563a7af7d498b77287c6154af1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &850003121
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +856,7 @@ GameObject:
   - component: {fileID: 850003122}
   - component: {fileID: 850003127}
   - component: {fileID: 850003126}
+  - component: {fileID: 850003128}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -924,6 +967,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b542bccebaf28d4382696535678f8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &850003128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 850003121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dbbe2ce951d2749bc74df91c35b494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1012275284
@@ -1064,7 +1118,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 962.5
-    y: 107.50006
+    y: 106.84638
     width: 175
     height: 175
   anchorVector: {x: 0, y: 0}
@@ -1206,7 +1260,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 540
-    y: 428.49997
+    y: 426.69983
     width: 507
     height: 217
   anchorVector: {x: 0, y: 0}
@@ -1607,7 +1661,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 117.5
-    y: 107.50006
+    y: 106.84638
     width: 175
     height: 175
   anchorVector: {x: 0, y: 0}

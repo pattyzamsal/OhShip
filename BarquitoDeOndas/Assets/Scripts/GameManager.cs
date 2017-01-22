@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour {
         gameOver = true;
         ripple.turnOff = true;
         pnlGameOver.SetActive(true);
+        AudioManager.instance.audioSource.PlayOneShot( AudioManager.instance.ohShip );
     }
 
     IEnumerator SpawnWaves() {
