@@ -248,7 +248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 
 --- !u!222 &126382153
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -861,6 +861,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114821987414047072, guid: 1e26113fa580a6649b8d6c267e3fca54,
+        type: 2}
+      propertyPath: textShadow
+      value: 
+      objectReference: {fileID: 2035133023}
+    - target: {fileID: 114821987414047072, guid: 1e26113fa580a6649b8d6c267e3fca54,
+        type: 2}
+      propertyPath: textScore
+      value: 
+      objectReference: {fileID: 126382152}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
   m_IsPrefabParent: 0
@@ -1615,7 +1625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 99999
+  m_Text: 
 --- !u!222 &2035133024
 CanvasRenderer:
   m_ObjectHideFlags: 0

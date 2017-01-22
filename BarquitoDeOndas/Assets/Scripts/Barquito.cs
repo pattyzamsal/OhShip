@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Barquito : MonoBehaviour {
 
@@ -10,9 +11,16 @@ public class Barquito : MonoBehaviour {
 
     public Animator ship;
 
+    public Text textShadow;
+
+    public Text textScore;
+
+    private int score;
+
     void Start() {
         instance = this;
         rigid = this.GetComponent<Rigidbody>();
+        score = 0;
     }
 
     public void ReactToWave( MoveInfo moveInfo ) {
@@ -22,5 +30,11 @@ public class Barquito : MonoBehaviour {
     public void ActivateAnimation(bool act) {
         if (act)
             ship.SetTrigger("tgrHundir");
+    }
+
+    public void CalculateScore() {
+        score += 100;
+        textScore.text = score.ToString();
+        textShadow.text = score.ToString();
     }
 }

@@ -1,8 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReviewCollision : MonoBehaviour {
+
+    private Barquito ship;
+
+    void Start() {
+        ship = GameObject.FindGameObjectWithTag("OhShip").GetComponent<Barquito>();
+    }
 
     void OnTriggerEnter(Collider coll) {
         if (coll.tag == "OhShip" && this.tag == "Obstacle") {
@@ -16,6 +23,7 @@ public class ReviewCollision : MonoBehaviour {
     void OnTriggerExit(Collider other) {
         if (other.tag == "Water" && this.tag == "Obstacle") {
             GameObject.Destroy(this.gameObject);
+            ship.CalculateScore();
         }
     }
 
