@@ -1,2 +1,2 @@
 # OhShip
-Repository of the Game Jam 217
+Repository of the Game Jam 2017
