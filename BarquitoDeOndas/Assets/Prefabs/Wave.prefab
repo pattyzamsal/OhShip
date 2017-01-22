@@ -53,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f231b35beee2dde4ba589bff58870c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rippleMax: 5
-  sphere: {fileID: 0}
+  maxRadius: 10
+  sphere: {fileID: 135740683747352774}
   multiplier: 10
 --- !u!135 &135740683747352774
 SphereCollider:
