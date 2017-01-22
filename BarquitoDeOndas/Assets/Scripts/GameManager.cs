@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
 
     public GameObject lifeSprite;
 
+    public Sprite noLifeSprite;
+
     public GameObject obstacle;
 
     public Vector3 spawnObstacle;
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour {
 
     public void LoseLife() {
         if( lifes != 1 ) {
-            GameObject.Destroy(lifeList[lifes-1]);
+            lifeList[lifes - 1].GetComponent<Image>().sprite = noLifeSprite;
             lifes--;
         }
         else {
