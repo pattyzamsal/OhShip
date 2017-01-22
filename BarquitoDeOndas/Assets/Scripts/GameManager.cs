@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
     public float waveWait;
 
+    public bool gameOver;
+
     public GameObject pnlGameOver;
 
     void Awake() {
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        gameOver = false;
         for( int i = 0; i < lifes; i++ ) {
             GameObject life = GameObject.Instantiate(lifeSprite, lifeContainer.transform);
             life.gameObject.transform.localScale = Vector3.one;
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver() {
+        gameOver = true;
         pnlGameOver.SetActive(true);
     }
 

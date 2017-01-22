@@ -23,14 +23,16 @@ public class ReviewCollision : MonoBehaviour {
     void OnTriggerExit(Collider other) {
         if (other.tag == "Water" && this.tag == "Obstacle") {
             GameObject.Destroy(this.gameObject);
-            ship.CalculateScore();
+            if(!GameManager.instance.gameOver) ship.CalculateScore();
         }
     }
 
     public IEnumerator SpawnNewShip() {
         yield return new WaitForSeconds( 2f );
-        Barquito.instance.ship.SetTrigger( "tgrBarquito" );
-        GameManager.instance.ResetShipPosition();
+        if( !GameManager.instance.gameOver ) {
+            Barquito.instance.ship.SetTrigger( "tgrBarquito" );
+            GameManager.instance.ResetShipPosition();
+        }
     }
 
 }
