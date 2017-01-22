@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
+    public ripples ripple;
+
     public Transform defaultPosition;
 
     public int lifes;
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour {
 
     public void GameOver() {
         gameOver = true;
+        ripple.turnOff = true;
         pnlGameOver.SetActive(true);
     }
 
