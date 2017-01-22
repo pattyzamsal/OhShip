@@ -8,6 +8,8 @@ public class Barquito : MonoBehaviour {
 
     public Rigidbody rigid;
 
+    public Animator ship;
+
     void Start() {
         instance = this;
         rigid = this.GetComponent<Rigidbody>();
@@ -15,5 +17,10 @@ public class Barquito : MonoBehaviour {
 
     public void ReactToWave( MoveInfo moveInfo ) {
         rigid.AddForce( new Vector3( moveInfo.directionX, 0, moveInfo.directionZ ).normalized * (moveInfo.speed), ForceMode.Impulse );
+    }
+
+    public void ActivateAnimation(bool act) {
+        if (act)
+            ship.SetTrigger("tgrHundir");
     }
 }
