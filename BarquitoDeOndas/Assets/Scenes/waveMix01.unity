@@ -211,8 +211,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 123.999725
-    y: 58.99929
+    x: 132.23184
+    y: -26.611723
     width: 268
     height: 90
   anchorVector: {x: 0, y: 0}
@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160f157754e2dcf4c8769c0b2db976d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barquito: {fileID: 0}
+  defaultPosition: {fileID: 0}
   lifes: 3
   lifeContainer: {fileID: 1369758651}
   lifeList: []
@@ -769,7 +771,7 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 961.99994
+    x: 962
     y: 98.00012
     width: 160
     height: 160
@@ -812,35 +814,6 @@ Prefab:
     - target: {fileID: 4288318318498824, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_Drag
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288318318498824, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114821987414047072, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: ship
-      value: 
-      objectReference: {fileID: 693921168}
-    - target: {fileID: 65068301628891546, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
@@ -976,11 +949,6 @@ MonoBehaviour:
     width: 160
     height: 160
   anchorVector: {x: 0, y: 0}
---- !u!95 &693921168 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95652316025591466, guid: 1e26113fa580a6649b8d6c267e3fca54,
-    type: 2}
-  m_PrefabInternal: {fileID: 503587197}
 --- !u!1001 &763321624
 Prefab:
   m_ObjectHideFlags: 0
