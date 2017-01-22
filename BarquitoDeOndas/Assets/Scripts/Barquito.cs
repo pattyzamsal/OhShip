@@ -16,7 +16,7 @@ public class Barquito : MonoBehaviour {
     }
 
     public void ReactToWave( MoveInfo moveInfo ) {
-        rigid.AddForce( new Vector3( moveInfo.directionX, 0, moveInfo.directionZ ).normalized * (moveInfo.speed), ForceMode.Impulse );
+        rigid.AddForce( new Vector3( moveInfo.directionX, 0, moveInfo.directionZ ).normalized * (moveInfo.speed) * 25, ForceMode.Force );
     }
 
     public void ActivateAnimation(bool act) {
