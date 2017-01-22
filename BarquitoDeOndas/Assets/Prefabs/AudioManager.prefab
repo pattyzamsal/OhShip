@@ -50,11 +50,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 0d5e40a6a8c3ccf47b3659e096629f00, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -135,4 +135,5 @@ MonoBehaviour:
   intro: {fileID: 8300000, guid: d63fb058526186742a6f9999faa150b3, type: 3}
   ohShip: {fileID: 8300000, guid: fba576f3309b827439e0c28d97360083, type: 3}
   pop: {fileID: 8300000, guid: bebe5d7c3179a694a9a07670a79bac90, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 0d5e40a6a8c3ccf47b3659e096629f00, type: 3}
   audioSource: {fileID: 0}

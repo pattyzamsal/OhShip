@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour {
     public AudioClip intro;
     public AudioClip ohShip;
     public AudioClip pop;
+    public AudioClip backgroundMusic;
 
     public AudioSource audioSource;
 

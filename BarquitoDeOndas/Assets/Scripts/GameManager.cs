@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        AudioManager.instance.audioSource.Play ();
         gameOver = false;
         for( int i = 0; i < lifes; i++ ) {
             GameObject life = GameObject.Instantiate(lifeSprite, lifeContainer.transform);
