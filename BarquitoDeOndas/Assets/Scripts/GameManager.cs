@@ -47,14 +47,14 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoseLife() {
-        if( lifes != 1 ) {
+        if( lifes > 0 ) {
             lifeList[lifes - 1].GetComponent<Image>().sprite = noLifeSprite;
             lifes--;
         }
         else {
             GameOver();
         }
-        lifeList.RemoveAt(0);
+        if( lifeList.Count != 0 ) lifeList.RemoveAt( lifeList.Count - 1 );
     }
 
     public void AddLife() {
