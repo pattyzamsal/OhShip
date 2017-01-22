@@ -351,6 +351,37 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: obstacle
+      value: 
+      objectReference: {fileID: 1887923366924094, guid: d7cb937bffa8bd445bfc547528d0b1b2,
+        type: 2}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: spawnWait
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: startWait
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: waveWait
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: spawnObstacle.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: spawnObstacle.z
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11030d984d7757e46aed4986fd846d41, type: 2}
   m_IsPrefabParent: 0
