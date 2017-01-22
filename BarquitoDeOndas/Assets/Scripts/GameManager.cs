@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour {
 
     public void LoseLife() {
         if( lifes != 1 ) {
+            GameObject.Destroy(lifeList[lifes-1]);
             lifes--;
         }
         else {
