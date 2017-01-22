@@ -172,43 +172,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_Drag
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 54890316979952576, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4288318318498824, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114821987414047072, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: ship
-      value: 
-      objectReference: {fileID: 693921168}
-    - target: {fileID: 65068301628891546, guid: 1e26113fa580a6649b8d6c267e3fca54,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e26113fa580a6649b8d6c267e3fca54, type: 2}
   m_IsPrefabParent: 0
---- !u!95 &693921168 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95652316025591466, guid: 1e26113fa580a6649b8d6c267e3fca54,
-    type: 2}
-  m_PrefabInternal: {fileID: 503587197}
 --- !u!1001 &763321624
 Prefab:
   m_ObjectHideFlags: 0
@@ -425,7 +391,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 0
-    y: 254.8125
+    y: 1918.5884
     width: 300
     height: 60
   anchorVector: {x: 0, y: 0}
