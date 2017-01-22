@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
         StartCoroutine(SpawnWaves());
     }
 
-    public void ResetShip() {
+    public void ResetShipPosition() {
         Barquito.instance.transform.position = defaultPosition.transform.position;
     }
 
