@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour {
 
-    public float rippleMax;
+    public float maxRadius;
 
     public SphereCollider sphere;
 
@@ -19,7 +19,7 @@ public class Wave : MonoBehaviour {
 
     void FixedUpdate() {
         sphere.radius += Time.fixedDeltaTime * multiplier;
-        if( sphere.radius > rippleMax ) {
+        if( sphere.radius > maxRadius ) {
             GameObject.Destroy( this.gameObject );
         }
     }
@@ -28,7 +28,7 @@ public class Wave : MonoBehaviour {
         if( coll.gameObject.tag == "OhShip" ) {
             moveInfo = new MoveInfo();
 
-            moveInfo.speed = Mathf.InverseLerp( 0, rippleMax, rippleMax / sphere.radius ) * multiplier;
+            moveInfo.speed = Mathf.InverseLerp( 0, maxRadius, maxRadius / sphere.radius ) * multiplier;
 
             moveInfo.directionX = coll.transform.position.x - this.transform.position.x;
             moveInfo.directionY = coll.transform.position.y - this.transform.position.y;
