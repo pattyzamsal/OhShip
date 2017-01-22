@@ -26,11 +26,22 @@ public class GameManager : MonoBehaviour {
     }
 
     public void LoseLife() {
+        if( lifes != 1 ) {
+            lifes--;
+        }
+        else {
+            GameOver();
+        }
         lifeList.RemoveAt(0);
     }
 
     public void AddLife() {
+        lifes++;
         lifeList.Add( GameObject.Instantiate( lifeSprite, lifeContainer.transform ) );
+    }
+
+    public void GameOver() {
+
     }
 
 }

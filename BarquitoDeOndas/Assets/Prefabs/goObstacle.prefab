@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4386228729310172}
   - component: {fileID: 33880970230390416}
-  - component: {fileID: 64390743321722722}
   - component: {fileID: 23008462575926860}
   m_Layer: 0
   m_Name: mPlaneBrillo02
@@ -55,7 +54,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4458220176897326}
   - component: {fileID: 33991118794079742}
-  - component: {fileID: 64611010666228336}
   - component: {fileID: 23035335203125136}
   m_Layer: 0
   m_Name: mPlaneBrillo01
@@ -73,7 +71,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4231599078723626}
   - component: {fileID: 33908616687483016}
-  - component: {fileID: 64357768679159688}
   - component: {fileID: 23048897362943132}
   m_Layer: 0
   m_Name: mPlaneBrillo04
@@ -91,7 +88,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4483621858613480}
   - component: {fileID: 33470052334073604}
-  - component: {fileID: 64866804096244286}
   - component: {fileID: 23036172657486672}
   m_Layer: 0
   m_Name: mPlaneBrillo03
@@ -141,9 +137,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4878503562516174}
+  - component: {fileID: 54858237317580636}
+  - component: {fileID: 65603697013073370}
+  - component: {fileID: 114859693980344770}
+  - component: {fileID: 114403287486989548}
   m_Layer: 0
   m_Name: goObstacle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1887923366924094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4055032497410440}
@@ -489,62 +489,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1444511980560084}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64357768679159688
-MeshCollider:
+--- !u!54 &54858237317580636
+Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1540325105630412}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_GameObject: {fileID: 1887923366924094}
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64390743321722722
-MeshCollider:
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
+--- !u!65 &65603697013073370
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137683498683220}
+  m_GameObject: {fileID: 1887923366924094}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64611010666228336
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1444511980560084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!64 &64866804096244286
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1793255888452890}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95869952580276170
 Animator:
   serializedVersion: 3
@@ -562,3 +533,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114403287486989548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887923366924094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8325a6da3521b64dba13b06ed519c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &114859693980344770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887923366924094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c0dbf121f45e443b473a92fea5e4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
