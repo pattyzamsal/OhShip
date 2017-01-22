@@ -311,6 +311,48 @@ MonoBehaviour:
   - {fileID: 1545453499402636, guid: 4868c6e814c599d4d8bb8f36b279b10c, type: 2}
   - {fileID: 1055125525223650, guid: 337a003fb4e62c64f8eabc8b3a5adb03, type: 2}
   - {fileID: 1562628710492260, guid: 80f35a69d81c1034ba5114d8f1976232, type: 2}
+--- !u!1001 &1077701421
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -23.219997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11.898764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4128448678818230, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1f648c0b4214b3841a1488e7a85daf80, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1081428019
 Prefab:
   m_ObjectHideFlags: 0
@@ -383,7 +425,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 0
-    y: 1923.9344
+    y: 254.8125
     width: 300
     height: 60
   anchorVector: {x: 0, y: 0}
