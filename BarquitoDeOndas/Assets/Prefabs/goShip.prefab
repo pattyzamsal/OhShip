@@ -305,6 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 0}
+  ship: {fileID: 95652316025591466}
 --- !u!198 &198182773089292570
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -360,7 +361,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 812553100
+  randomSeed: 198564262
   InitialModule:
     serializedVersion: 3
     enabled: 1

@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
+    public GameObject barquito;
+
+    public Transform defaultPosition;
+
     public int lifes;
 
     public GameObject lifeContainer;
@@ -38,6 +42,10 @@ public class GameManager : MonoBehaviour {
             lifeList.Add( life);
         }
         StartCoroutine(SpawnWaves());
+    }
+
+    public void ResetShip() {
+        Barquito.instance.transform.position = defaultPosition.transform.position;
     }
 
     public void LoseLife() {

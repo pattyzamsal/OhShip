@@ -9,6 +9,7 @@ public class ReviewCollision : MonoBehaviour {
             coll.gameObject.SendMessage("ActivateAnimation", true);
 
             GameManager.instance.LoseLife();
+            StartCoroutine( SpawnNewShip ());
         }
     }
 
@@ -16,6 +17,12 @@ public class ReviewCollision : MonoBehaviour {
         if (other.tag == "Water" && this.tag == "Obstacle") {
             GameObject.Destroy(this.gameObject);
         }
+    }
+
+    public IEnumerator SpawnNewShip() {
+        yield return new WaitForSeconds( 2f );
+        Barquito.instance.ship.SetTrigger( "tgrBarquito" );
+        GameManager.instance.ResetShip();
     }
 
 }
