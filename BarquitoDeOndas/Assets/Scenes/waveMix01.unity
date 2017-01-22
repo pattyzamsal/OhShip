@@ -347,6 +347,31 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a5ee75f77877c342b85543e4e66c5e9, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1369758651 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1186426204217952, guid: 11030d984d7757e46aed4986fd846d41,
+    type: 2}
+  m_PrefabInternal: {fileID: 1535235427}
+--- !u!114 &1369758656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369758651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae9da3026d4c624bb2ddb8ce35bc7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manualRefresh: 0
+  automatic: 0
+  anchorRect:
+    serializedVersion: 2
+    x: 0
+    y: 1923.9344
+    width: 300
+    height: 60
+  anchorVector: {x: 0, y: 0}
 --- !u!1001 &1535235427
 Prefab:
   m_ObjectHideFlags: 0
@@ -444,45 +469,50 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114334082628989206, guid: 11030d984d7757e46aed4986fd846d41,
+    - target: {fileID: 114257531717326210, guid: 11030d984d7757e46aed4986fd846d41,
         type: 2}
-      propertyPath: m_UiScaleMode
+      propertyPath: m_ChildForceExpandWidth
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1429107583751340, guid: 11030d984d7757e46aed4986fd846d41, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 114257531717326210, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: m_ChildForceExpandHeight
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+    - target: {fileID: 114257531717326210, guid: 11030d984d7757e46aed4986fd846d41,
         type: 2}
-      propertyPath: obstacle
-      value: 
-      objectReference: {fileID: 1887923366924094, guid: d7cb937bffa8bd445bfc547528d0b1b2,
-        type: 2}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
-        type: 2}
-      propertyPath: spawnWait
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
-        type: 2}
-      propertyPath: startWait
+      propertyPath: m_ChildAlignment
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+    - target: {fileID: 114257531717326210, guid: 11030d984d7757e46aed4986fd846d41,
         type: 2}
-      propertyPath: waveWait
-      value: 4
+      propertyPath: m_ChildControlWidth
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+    - target: {fileID: 114257531717326210, guid: 11030d984d7757e46aed4986fd846d41,
         type: 2}
-      propertyPath: spawnObstacle.x
-      value: 9
+      propertyPath: m_ChildControlHeight
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114114966262342214, guid: 11030d984d7757e46aed4986fd846d41,
+    - target: {fileID: 224414075594954336, guid: 11030d984d7757e46aed4986fd846d41,
         type: 2}
-      propertyPath: spawnObstacle.z
-      value: 3
+      propertyPath: m_AnchorMin.y
+      value: 0.9688139
+      objectReference: {fileID: 0}
+    - target: {fileID: 224414075594954336, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.2777778
+      objectReference: {fileID: 0}
+    - target: {fileID: 224414075594954336, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224414075594954336, guid: 11030d984d7757e46aed4986fd846d41,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 11030d984d7757e46aed4986fd846d41, type: 2}
