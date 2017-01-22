@@ -7,8 +7,6 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
-    public GameObject barquito;
-
     public Transform defaultPosition;
 
     public int lifes;
@@ -66,7 +64,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver() {
-
+        Debug.Log("GAME OVER");
     }
 
     IEnumerator SpawnWaves() {
