@@ -15,6 +15,16 @@ public class GameManager : MonoBehaviour {
 
     public GameObject lifeSprite;
 
+    public GameObject obstacle;
+
+    public Vector3 spawnObstacle;
+
+    public float spawnWait;
+
+    public float startWait;
+
+    public float waveWait;
+
     void Awake() {
         instance = this;
     }
@@ -23,6 +33,7 @@ public class GameManager : MonoBehaviour {
         for( int i = 0; i < lifes; i++ ) {
             lifeList.Add( GameObject.Instantiate( lifeSprite, lifeContainer.transform ) );
         }
+        StartCoroutine(SpawnWaves());
     }
 
     public void LoseLife() {
@@ -44,4 +55,19 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    IEnumerator SpawnWaves() {
+        yield return new WaitForSeconds(startWait);
+        while (true) {
+            for (int zpos = -3; zpos < 4; zpos += 3) {
+                if (Random.value > 0.7f) {
+                    Vector3 spawnPosition = new Vector3(spawnObstacle.x,
+                                                         spawnObstacle.y, zpos);
+                    Quaternion spawnRotation = Quaternion.identity;
+                    Instantiate(obstacle, spawnPosition, spawnRotation);
+                    yield return new WaitForSeconds(spawnWait);
+                }
+            }
+            yield return new WaitForSeconds(waveWait);
+        }
+    }
 }
