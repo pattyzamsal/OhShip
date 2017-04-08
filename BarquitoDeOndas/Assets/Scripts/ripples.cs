@@ -7,6 +7,8 @@ public class ripples : MonoBehaviour {
 	// Use this for initialization
 	public Camera cam;
 
+    private Material _mat;
+
     public bool turnOff;
 
 	float offWave;
@@ -15,7 +17,8 @@ public class ripples : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cam = GetComponent<Camera>();
-		offWave = 1.0f;
+        _mat = this.GetComponent<Renderer>().material;
+        offWave = 1.0f;
 	}
 
 	// Update is called once per frame
@@ -28,12 +31,11 @@ public class ripples : MonoBehaviour {
             RaycastHit hitInfo = new RaycastHit();
             bool hit = Physics.Raycast( Camera.main.ScreenPointToRay( Input.mousePosition ), out hitInfo );
             if( hit ) {
-                this.GetComponent<Renderer>().material.SetInt( "_Click", 1 );
+                _mat.SetInt( "_Click", 1 );
                 offWave = 1.0f;
-                this.GetComponent<Renderer>().material.SetFloat( "_DirectionX", hitInfo.point.x );
-                this.GetComponent<Renderer>().material.SetFloat( "_DirectionZ", hitInfo.point.z );
-                this.GetComponent<Renderer>().material.SetFloat( "_OffWave", offWave );
-
+                _mat.SetFloat( "_DirectionX", hitInfo.point.x );
+                _mat.SetFloat( "_DirectionZ", hitInfo.point.z );
+                _mat.SetFloat( "_OffWave", offWave );
             }
 		} 
 
@@ -42,8 +44,7 @@ public class ripples : MonoBehaviour {
 		if (offWave < 0.0f)
 			offWave = 0.0f;
 
-		this.GetComponent<Renderer> ().material.SetFloat ("_OffWave",offWave);
-
+        _mat.SetFloat ("_OffWave",offWave);
 	}
 
 }
