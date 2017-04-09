@@ -274,8 +274,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 212.90652
-    y: -155.02823
+    x: 123.99972
+    y: 58.786606
     width: 268
     height: 90
   anchorVector: {x: 0, y: 0}
@@ -415,9 +415,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_Camera: {fileID: 814450946}
+  m_PlaneDistance: 5
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -506,6 +506,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4745431738264930, guid: bd402a3834afc024aa1984e61c59bce1, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114272266347873562, guid: bd402a3834afc024aa1984e61c59bce1,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114055038484446956, guid: bd402a3834afc024aa1984e61c59bce1,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -705,7 +715,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 540
-    y: 125.00006
+    y: 124.488815
     width: 1080
     height: 250
   anchorVector: {x: 0, y: 0}
@@ -879,8 +889,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 961.9988
-    y: 97.999855
+    x: 961.99854
+    y: 97.63585
     width: 160
     height: 160.00002
   anchorVector: {x: 0, y: 0}
@@ -990,7 +1000,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 540
-    y: 125.00012
+    y: 124.48887
     width: 1080
     height: 250
   anchorVector: {x: 0, y: 0}
@@ -1550,6 +1560,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7b1e21d3eb92af439a1af4c30a449a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!20 &814450946 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 20284318168065426, guid: bd402a3834afc024aa1984e61c59bce1,
+    type: 2}
+  m_PrefabInternal: {fileID: 202641669}
 --- !u!1 &823974865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1617,7 @@ MonoBehaviour:
   anchorRect:
     serializedVersion: 2
     x: 732.99976
-    y: 63.000023
+    y: 62.779175
     width: 259.99982
     height: 89.999985
   anchorVector: {x: 0, y: 0}
@@ -1687,7 +1702,13 @@ Prefab:
       propertyPath: m_TagString
       value: Water
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114523099933025648, guid: 8a5ee75f77877c342b85543e4e66c5e9,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114523099933025648, guid: 8a5ee75f77877c342b85543e4e66c5e9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8a5ee75f77877c342b85543e4e66c5e9, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1186228748 stripped
@@ -2045,8 +2066,8 @@ MonoBehaviour:
   automatic: 0
   anchorRect:
     serializedVersion: 2
-    x: 742.9998
-    y: 139.00108
+    x: 742.9999
+    y: 138.62483
     width: 268.00012
     height: 89.99998
   anchorVector: {x: 0, y: 0}
