@@ -9,6 +9,8 @@ public class Barquito : MonoBehaviour {
 
     public Rigidbody rigid;
 
+    public Collider col;
+
     public Animator ship;
 
     public Text textShadow;
@@ -19,7 +21,12 @@ public class Barquito : MonoBehaviour {
 
     void Start() {
         instance = this;
-        rigid = this.GetComponent<Rigidbody>();
+        if( rigid == null ) {
+            rigid = this.GetComponentInChildren<Rigidbody>();
+        }
+        if(col == null) {
+            col = rigid.GetComponent<Collider>();
+        }
         score = 0;
     }
 
@@ -28,8 +35,12 @@ public class Barquito : MonoBehaviour {
     }
 
     public void ActivateAnimation(bool act) {
-        if (act)
-            ship.SetTrigger("tgrHundir");
+        if( act ) {
+            ship.SetTrigger( "tgrHundir" );
+            AudioManager.instance.audioSource.PlayOneShot( AudioManager.instance.ohShip );
+            rigid.velocity = Vector3.zero;
+            col.enabled = false;
+        }
     }
 
     public void CalculateScore() {
