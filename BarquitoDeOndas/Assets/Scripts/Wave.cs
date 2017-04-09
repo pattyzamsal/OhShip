@@ -34,7 +34,7 @@ public class Wave : MonoBehaviour {
             moveInfo.directionY = coll.transform.position.y - this.transform.position.y;
             moveInfo.directionZ = coll.transform.position.z - this.transform.position.z;
 
-            coll.gameObject.SendMessage( "ReactToWave", moveInfo );
+            coll.transform.root.GetComponentInChildren<Barquito>().ReactToWave( moveInfo );
             GameObject.Destroy( this.gameObject );
         }
     }
