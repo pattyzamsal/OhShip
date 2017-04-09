@@ -82,8 +82,6 @@
 				v.normal.y = 1.0f;
 				v.normal.z = 1.0f*h;
 			}
-
-
       	}
 
 
@@ -109,7 +107,7 @@
 			o.Normal = npWave;
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
-			o.Alpha = 0.4f;
+			o.Alpha = 0.65f;
 		}
 		ENDCG
 	}
