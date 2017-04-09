@@ -39,7 +39,7 @@ public class ripples : MonoBehaviour {
             }
 		} 
 
-		offWave = offWave - (Time.fixedDeltaTime * 1.0f);
+		offWave = offWave - (Time.deltaTime * 1.0f);
 
 		if (offWave < 0.0f)
 			offWave = 0.0f;
