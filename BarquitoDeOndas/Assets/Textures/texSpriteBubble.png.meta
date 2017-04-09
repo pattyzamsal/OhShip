@@ -67,12 +67,12 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Android
-    maxTextureSize: 256
-    textureFormat: 47
+    maxTextureSize: 32
+    textureFormat: 13
     textureCompression: 1
-    compressionQuality: 50
+    compressionQuality: 0
     crunchedCompression: 0
-    allowsAlphaSplitting: 0
+    allowsAlphaSplitting: 1
     overridden: 1
   - buildTarget: WebGL
     maxTextureSize: 2048
