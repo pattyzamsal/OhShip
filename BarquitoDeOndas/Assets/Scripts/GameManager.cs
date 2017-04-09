@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour {
 
     public void ResetShipPosition() {
         Barquito.instance.transform.position = defaultPosition.transform.position;
+        Barquito.instance.col.enabled = true;
     }
 
     public void LoseLife() {
